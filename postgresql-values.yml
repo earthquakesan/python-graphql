@@ -1,0 +1,7 @@
+postgresqlUsername: postgres
+postgresqlPassword: postgres
+postgresqlDatabase: test
+service:
+  type: NodePort
+  port: 5432
+  nodePort: 30432
