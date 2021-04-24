@@ -13,3 +13,12 @@ clean:
 
 psql-console:
 	./psql.sh
+
+web:
+	FLASK_APP=pygraphql/web.py flask run
+
+add-car-curl:
+	curl -X POST -F 'Name=Toyota' -F 'Price=45000' http://localhost:5000/car
+
+get-cars-curl:
+	curl -X GET http://localhost:5000/cars | python -m json.tool

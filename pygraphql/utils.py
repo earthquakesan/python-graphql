@@ -4,8 +4,11 @@
 from sqlalchemy.ext.declarative import declarative_base
 
 import config
+from models.car import CarModel
 
-def create_tables():
-    Base = declarative_base()
-    Base.metadata.bind = config.get_sql_engine()
-    Base.metadata.create_all()
+def add_car(car_name, car_price):
+    session = config.get_sql_session()
+    session.add_all(
+        [CarModel(Name=car_name, Price=car_price)]
+    )
+    session.commit()

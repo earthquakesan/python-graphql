@@ -8,6 +8,7 @@ sqlalchemy = "*"
 psycopg2 = "*"
 graphene = "*"
 graphene-sqlalchemy = "*"
+flask = "*"
 
 [dev-packages]
 
