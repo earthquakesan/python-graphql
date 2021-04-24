@@ -22,10 +22,10 @@ def get_cars():
 
     query = '''
         query {
-        cars {
-            Name,
-            Price
-        }
+            cars {
+                Name,
+                Price
+            }
         }
     '''
     result = schema.execute(query, context_value={'session': config.get_sql_session()})
